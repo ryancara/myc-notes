@@ -1,0 +1,667 @@
+			////////////////////////////////
+			/////////IF STATEMENTS//////////
+			////////////LESSON 4////////////
+			////////////////////////////////			
+
+//#region
+//
+//using System;
+//
+//namespace IfStatements
+//{
+//	class MainClass
+//	{
+//		public static void Main (string[] args) //method called "main..called when program starts
+//		{
+//			Random numberGenerator = new Random (); //how to create a new random number generator
+//
+//			int num01 = numberGenerator.Next (1, 11); //11 is the highest number so it goes to 10
+//			int num02 = numberGenerator.Next (1, 11); 
+//
+//			Console.WriteLine ("What is " + num01 + " times " + num02 + "?"); 
+//
+//			int answer = Convert.ToInt32 (Console.ReadLine ());
+//
+//
+//				if (answer == num01 * num02)
+//				{
+//					Console.WriteLine ("Well done!");
+//				}
+//				else
+//				{
+//					Console.WriteLine ("Are you even trying");
+//				}
+//				Console.ReadKey ();
+//		}
+//	}
+//}
+
+#endregion
+
+			////////////////////////////////
+			//////SWITCH STATEMENTS/////////
+			////////////LESSON 5////////////
+			////////////////////////////////
+
+#region
+
+//using System;
+//
+//namespace SwitchStatements
+//{
+//	class MainClass
+//		
+//
+//		//our main class and below our method
+//
+//		//inside C# there is a class called "Random" and inside of this class. it has all kinds of method, that do different things. Such as generate a random number
+//		//what we need to do is create an instance of this "Random" class.
+//
+//
+//	{
+//		public static void Main (string[] args) //method called "main..called when program starts
+//		{
+//			Random numberGenerator = new Random (); //this is the syntax for creating an instance of a class. Here we are spawning a class that can do different things and we give it a name "numberGenerator" 
+//
+//			int num01 = numberGenerator.Next (1, 11); //11 is the highest number so it goes to 10
+//			int num02 = numberGenerator.Next (1, 11); 
+//
+//			Console.WriteLine ("What is " + num01 + " times " + num02 + "?"); 
+//
+//			int answer = Convert.ToInt32 (Console.ReadLine ());
+//
+//			//now we're going to look at another piece of conditional logic called the Switch Statement.
+//			//we've already looked at the if statement which compares things. We also have the ability to check if it is not
+//			//what a switch statement does is if there's a bunch of things we need to check for in one variable
+//
+//
+//			//so we're going to write different answers with the switch statement.
+//
+//
+//
+//			if (answer == num01 * num02) //regular if switch just like an if we open and close parathenneks
+//			{
+//				int responseIndex = numberGenerator.Next (1, 4);
+//				switch (responseIndex)
+//				{
+//				case 1:
+//					Console.WriteLine ("good job boi");
+//					break; //it's very important that after every case you insert the break keyword. It simply breaks out of the switch statement so you can continue your code.
+//				case 2:
+//					Console.WriteLine ("b0i good job");
+//					break;
+//				default:  //a default case it like an else statement. if none of the other cases are met, we will result to the default case
+//					Console.WriteLine ("boi job good");
+//					break;
+//				}
+//			}
+//
+//
+//			else //changes depending on how close (or far) the user was from the correct answer
+//			{
+//				int diff = Math.Abs (answer - (num01 * num02)); //math absolute statement. converts everything inside bracket and takes absolute value (posotive number). If it's a negative value it'll * -1 to get positive number.
+//
+//				if (diff == 1) {
+//					Console.WriteLine ("Are you even trying");
+//				} else if (diff <= 10) {
+//					Console.WriteLine ("Are you even trying 10, so close");
+//				} else {
+//					Console.WriteLine ("Way off");
+//				}
+//
+//
+//
+//			Console.ReadKey ();
+//			}
+//		}
+//	}
+//}
+
+#endregion
+
+			////////////////////////////////
+			////////////FOR LOOPS///////////
+			////////////LESSON 6////////////
+			////////////////////////////////
+
+#region
+
+//using System;
+//
+//namespace ForLoops
+//{
+//	class MainClass
+//	{
+//		public static void Main (string[] args) //method called "main..called when program starts
+//		{
+//			for (int i = 0; i < 100; i++) //a for loop is a way to iterate through something a certain amount of times. Setting i to starting number equal to 1, then we do whatever is in curly brackets a slong as codition is met (i is under 10). Then we increment i by 1 each time loop goes through.
+//			{
+//				Console.WriteLine (i);
+//			}
+//
+//			Console.ReadKey (); 
+//		}
+//	}
+//}
+
+#endregion
+
+			////////////////////////////////
+			////////////WILE LOOPS//////////
+			////////////LESSON 7////////////
+			////////////////////////////////
+
+#region
+
+//using System;
+//
+//namespace ForLoops
+//{
+//	class MainClass
+//	{
+//		public static void Main (string[] args) //method called "main..called when program starts
+//
+////			{
+////			//this section emulates a for loop
+////			int i = 1;
+////			while (i <= 10)
+////			{
+////				Console.WriteLine (i); 
+////				i++;
+////			}
+//
+//		{
+//
+//			Random numbergen = new Random ();
+//
+//			int numberOfAttempts = 0;
+//			int attempt = 0;
+//
+////			do {
+////				
+////				} while (condition); 
+//
+//
+//			while (attempt != 6)
+//				{
+//				attempt = numbergen.Next (1, 7);
+//				Console.WriteLine("Tom rolled: " + attempt + ". ");
+//				numberOfAttempts ++;
+//				}
+//
+//			Console.WriteLine ("It took Tom " + numberOfAttempts + " attempts to roll a 6."); 
+//			Console.ReadKey ();
+//		}
+//	}
+//}
+
+#endregion
+
+			////////////////////////////////
+			/////////////METHODS////////////
+			////////////LESSON 8////////////
+			////////////////////////////////
+
+#region
+
+using System;
+
+namespace Test3
+{
+	class MainClass
+	{
+		public static void Main (string[] args)
+		{
+
+
+			int results = Add (1, 8);
+			if (results > 10)
+			{
+			Console.WriteLine (results); 
+			}
+			else
+			{
+				Console.WriteLine ("nein");
+			}
+		
+			Console.ReadKey ();
+
+		}
+
+		public static int Add(int num01, int num02)
+		{
+
+			return num01 + num02;
+		}
+
+	}
+}
+
+
+
+#endregion
+
+			////////////////////////////////
+			/////////////ARRAYS/////////////
+			////////////LESSON 9////////////
+			////////////////////////////////
+
+#region
+
+//using System;
+//
+//namespace Test3
+//{
+//	class MainClass
+//	{
+//		public static void Main (string[] args)
+//		{
+//			////////////////////////////////
+//			/////////////NUMBERS////////////
+//			////////////////////////////////
+//			
+//
+//			//"new" is used when spawning new data
+//			//when creating arrays need to know how large it needs to be which goes in []
+//
+//			int[] numbers = new int[5]; //syntax for arrays
+//
+////			 int amountOfNumbers = 5 
+////			 int[] numbers = new int [amountOfNumbers];    //"alternate way" 
+//
+//			numbers [0] = 12;
+//			numbers [1] = 3;
+//			numbers [2] = 6;
+//			numbers [3] = 7;
+//			numbers [4] = 8;
+//
+//			////////////////////////////////
+//			/////////////STRINGS////////////
+//			////////////////////////////////
+//			
+//
+//			string[] names = new string[3];
+//
+//			names [0] = "Tom";
+//			names [1] = "Mark";
+//			names [2] = "Matt";
+//
+//
+//
+////			string[] names = new string[3] 
+////			{
+////			"Tom", "Mark", "Matt"
+////			};										//"alternate way"
+//
+//
+////			//increment i until we reach the end of our array
+////			for (int i = 0; 1 < numbers.Length; i++) 
+////			{
+////				Console.Write (numbers[i] + ", ");
+////			}
+//
+//			foreach (int number in numbers) 
+//			{
+//				Console.Write (number);
+//				// "for each" statements are awesome if we don't need to cvhange things in the Array using them.
+//			}
+//
+//			Console.WriteLine ();
+//			Console.ReadKey ();
+//		}
+//
+//	}
+//}
+
+#endregion
+
+			////////////////////////////////
+			/////////////LISTS//////////////
+			////////////LESSON 9////////////
+			////////////////////////////////
+
+#region
+
+			//similar to arrays. Slightly different syntax
+			//should only use if you don't know beforehand how many elements are gonna be in them
+			//if you do know...use arrays as they're faster
+
+
+//using System;
+//
+//using System.Collections.Generic; //need to import functionaltity in this namespace
+//
+//namespace Test3
+//{
+//	class MainClass
+//	{
+//		public static void Main (string[] args)
+//		{
+//
+//			List<int> numbers = new List<int> (); //syntax for list
+//
+//			numbers.Add (13);
+//			numbers.Add (4);
+//			numbers.Add (8);
+//
+//			// use "count" insted of length 
+//
+//			for (int i = 0; i < numbers.Count; i++) 
+//			{
+//				Console.WriteLine (numbers [i]); //same syntax as array
+//			}
+//
+//			Console.WriteLine (); //same syntax as array
+//
+//			numbers.RemoveAt (1);
+//
+//			Console.ReadKey ();
+//		}
+//	}
+//}
+
+		////////////////////////////////
+		////MULTI-DIMENSION ARRAYS//////
+		////////////LESSON 9////////////
+		////////////////////////////////
+
+		//awesome, used quaite a lot in game dev
+		//good for creating maps in games...you're gonna use it all the time
+
+
+
+
+//using System;
+//
+//using System.Collections.Generic; //need to import functionaltity in this namespace
+//
+//namespace Test3
+//{
+//	class MainClass
+//	{
+//		public static void Main (string[] args)
+//		{
+//
+//			CreateGrid();
+//
+//			Console.ReadKey ();
+//		}
+//
+//		public static void CreateGrid ()
+//		{
+//			int width = 20;
+//			int height = 20;
+//
+//
+//			int[,] grid = new int[width, height]; //for 2 dimensional
+////			int [, ,] grid = new int[5,5,5] //for 3 dimensional...etc
+//
+//
+//			for (int x = 0; x < width; x++) //our first for loop within a for loop. for each iteration of x it'll do a y iteration
+//			{
+//				for (int y = 0; y < height; y++)
+//				{
+//					grid [x, y] = x + y;
+//					Console.Write (grid [x,y] + " " ); 
+//				}
+//				Console.WriteLine ();
+//			}
+//
+//		}
+//	}
+//}
+
+#endregion
+
+			////////////////////////////////
+			////////////Classes/////////////
+			////////////LESSON 10///////////
+			//////////////////////////////// 
+
+#region
+
+//			//look at how classes can be used to create new sets of data
+//			//that can be distributed throughout our application
+//			//look at how it can improve the way we write code
+//			//and allow us to create new kinds of software
+//
+//
+//using System;
+//
+//namespace Classes
+//{
+//	class Animal
+//	{
+//
+//		//Aside from the public and private access modifiers. There is one called static
+//		//Public and private are bound to the instance of the animal we are gonna be creating example: dog (new instance of the class animal)
+//		//but we can also have a variable or method that are shared between all instances of the animal class
+//		//a good example of this would be if we wanted to keep score of how many animals we havee //example below
+//		//what we want to do is raise the count automatically every time we make a new animal 
+//
+//		public static int Count = 0; 
+//
+//
+////		public string name = "Spotty"; //must be public to be accessed by other class
+////		public int age = 6;
+////		public float happiness = 0.5f;
+//
+//				public string name; //must be public to be accessed by other class
+//				public int age;
+//				public float happiness;
+//
+//
+//				public Animal () //class constructer...looks like a method call. But a class construcor is a method that is called right this second
+//
+//				{
+//					name = "spotty";
+//					age = 6;
+//					happiness = 0.5f;
+//
+//					Count ++;
+//				}
+//
+//
+//				public Animal (string _name, int _age, float _happiness) //class constructer...looks like a method call. But a class construcor is a method that is called right this second
+//
+//				{
+//					name = _name;
+//					age  = _age;
+//					happiness = _happiness;
+//
+//					Count ++;
+//				}
+//
+//		//we can also have class methods/functions inside this class that do different things with data
+//		//when we call this method it should print out all we know about the dog so far. 
+//		//also must be public to access it from other classes
+//
+//
+//
+//		//CLASS METHODS
+//		public void Print ()
+//		{
+//			Console.WriteLine ("Name: " + name);
+//			Console.WriteLine ("Age: " + age);
+//			Console.WriteLine ("Hapiness: " + happiness);
+//		}
+//
+//
+//		// Access modifiers describe from where and how a piece of data or a variable can be accessed 
+//		// in the past we've been writing "public static void" class. Public and Static are modifiers. WE have three types of modifiers
+//		// We have private, public and Static. Will default to private if we don't specify. 
+//		// Private = this data can only be accessed from inside the same class. 
+//		// Public = this data can be accessed from other classes if we reference the class
+//		// Static = Not bound to an instance of the class, but it shared by all the instances 
+//	}
+//		
+//	class MainClass
+//	{
+//
+//		public static void Main (string [] args)
+//		{
+//
+//			Animal dog = new Animal (); //instantiate class (creates new Animal).
+////			Console.WriteLine (dog.name); //doing this creates new animal and writes the name spotty. We can also change things in this Animal class.  Access values in class by using dot
+//			dog.Print ();
+//
+//			Console.WriteLine (); //empty line for neatness
+//
+//			Animal cat = new Animal ("Mr Beans", 10, 0.8f);
+//			cat.Print ();
+//
+////			dog.name = "TestDog"; //Access and change values in class by using dot
+////			Console.WriteLine (dog.name);
+//
+//			//we can also have class methods/functions inside this class that do different things with data
+//
+//
+//			Console.WriteLine ();
+//			Console.WriteLine ("num of animals: " + Animal.Count);
+//
+//			//Aside from the public and private access modifiers. There is one called static
+//			//Public and private are bound to the instance of the animal we are gonna be creating example: dog (new instance of the class animal)
+//			//but we can also have a variable or method that are shared between all instances of the animal class
+//			//a good example of this would be if we wanted to keep score of how many animals we havee
+//
+//
+//			Console.ReadKey ();
+//		}
+//	}
+//}
+
+#endregion
+
+			////////////////////////////////
+			////////////Inheritance/////////
+			////////////LESSON 11///////////
+			////////////////////////////////
+
+#region
+
+//inheritance allows us to share code between classes
+//imagine you are making an RPG. And we have a base class called hero, and he has different properties that are genereal for all heroes
+//such as health, strength, int, and stamina
+//then we have derived classes that share all those properites and add some new ones
+//example would be Shaman, Warrior ETC. All of these things can be derived from the same base class
+//what we do is instance the derrived class. So when we then change this instance the base values will not be changed for all the instances
+//the point is to reuse the code
+
+
+
+//namespace inheritance
+//{
+//	class MainClass
+//	{
+//		//so this is our base class, and you will notice that we don't give it a keyword to say that this is our base class
+//		//we don't really need to specify that. Classes can derive from a class which derives from a class which derives from a class etc.
+//
+//		public class Animal
+//		{
+//			public string name;
+//			public int age;
+//			public float happiness;
+//
+//			public void PrintBase ()
+//			{
+//				Console.WriteLine ("Name " + name);
+//				Console.WriteLine ("Age  " + age);
+//				Console.WriteLine ("Happiness " + happiness);
+//			}
+//		}
+//
+//		class Dog : Animal //our derrived class. it will be called dog and will derrive from Animal. We use : to specify this. Now the dog class will share all of the base values with the animal class such as  name, age and hapiness
+//		{
+//			public int spotCount; 
+//			public void Bark ()
+//			{
+//				Console.WriteLine ("woooof!");
+//
+//				//so lets say that in this derrived class we want to access one of the parameteres inside of the animal class. 
+//				//we can do this by simple typing....:
+//
+//				base.happiness += 0.1f; //base is good to put (not neccassartyyy,) as it shows it's from the base class and not this dog class
+//				//also the dogs hapiness goes up by 0.1 everytime he barks
+//			}
+//		}
+//
+//
+//		class Cat : Animal
+//		{
+//			//So basically..this is the base of inheritance. What we can do now is simply use this. It's very easy to use, and can really help organise a program. This is central to many different programs. You can write a program without inheritance but it is genreally a bad idea.
+//			public float cuteness; 
+//			public void Meow ()
+//			{
+//				Console.WriteLine ("meeeow!");
+//
+//				base.happiness -= 0.1f; //goes down every time cat meows
+//			}
+//		}
+//
+//		public static void Main (string[] args)
+//		{
+//			Dog spotty = new Dog (); //time to set base values
+//			spotty.name = "spotty";
+//			spotty.age = 4;
+//			spotty.happiness = 0.8f;
+//			//now lets access values that are specific to this derrived instance example spotcount. Not cuteness as that is a cat thing
+//			spotty.spotCount = 25;
+//			spotty.PrintBase ();
+//			spotty.Bark ();
+//
+//			Console.WriteLine ("New Happiness " + spotty.happiness); //will go up as he barked. Happiness goes up by 0.1 every time bark is called.
+//
+//			Console.WriteLine ();
+//
+//			Cat kitty = new Cat ();
+//			kitty.name = "Kitty";
+//			kitty.age = 10;
+//			kitty.happiness = 0.3f;
+//			kitty.cuteness = 0.3f; 
+//			kitty.PrintBase ();
+//			kitty.Meow ();
+//			Console.Write ("New Happiness " + kitty.happiness);
+//
+//			Console.WriteLine ();
+//		}
+//	}
+//}
+//
+
+#endregion
+
+			////////////////////////////////
+			////////////ENUMS///////////////
+			////////////LESSON 12///////////
+			////////////////////////////////
+
+
+#region
+
+//Enums are farily easy to understand once you know why they are useful.
+//The formal definition of an enum is bascially a type we create consiting of a bunch of constants that we associate with a name
+
+
+//using System;
+//
+//namespace Brackeys12
+//{
+//	class MainClass
+//	{
+//
+//		//an example of an enum. We give it a name "Direction", then we open and class curly brackets and finish with a semi. IN this curly's we could be directions such as N E S W
+//
+//		enum Direction {North, West, East, South};
+//
+//		public static void Main (string[] args)
+//
+//		{
+//
+//			Direction dir = Direction.East; 
+//
+//		}
+//
+//	}
+//}
+
+#endregion
